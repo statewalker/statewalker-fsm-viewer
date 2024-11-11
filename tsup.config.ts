@@ -7,7 +7,6 @@ export default defineConfig((options: Options) => ({
   treeshake: true,
   noExternal: [
     "@statewalker/fsm",
-    "@statewalker/fsm/utils",
     "@statewalker/fsm-charts",
     // "lodash",
   ],
