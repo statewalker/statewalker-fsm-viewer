@@ -15,7 +15,6 @@ import {
 } from "@statewalker/fsm";
 
 import { getInvalidation } from "./trackDomNode.js";
-import { a } from "vitest/dist/chunks/suite.B2jumIFP.js";
 
 export function prepareStateDescriptions({
   element,
@@ -152,7 +151,7 @@ export function newProcessCharts({
   // onTransitionClick,
   onEventClick,
   invalidation,
-  lodash
+  lodash,
 }: {
   direction?: "tb" | "bt" | "lr" | "rl";
   config: FsmStateChartsConfig;
@@ -160,7 +159,7 @@ export function newProcessCharts({
   onTransitionClick?: (transitionId: string) => void;
   onEventClick?: (edge: { event: string }) => void;
   invalidation?: Promise<void>;
-  lodash : unknown;
+  lodash: unknown;
 }): HTMLElement & { selectState: (stack: string[]) => () => void } {
   // ====================================================
   // Stage 1: create a static statechart index
