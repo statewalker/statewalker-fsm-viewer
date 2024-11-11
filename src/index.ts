@@ -1,4 +1,3 @@
-import lodash from "lodash";
 import {
   getStateDescriptionRenderer,
   buildStatechartCss,
@@ -16,6 +15,7 @@ import {
 } from "@statewalker/fsm";
 
 import { getInvalidation } from "./trackDomNode.js";
+import { a } from "vitest/dist/chunks/suite.B2jumIFP.js";
 
 export function prepareStateDescriptions({
   element,
@@ -54,9 +54,11 @@ export function renderStateDescription({
 export function renderStateCharts({
   process,
   direction = "tb",
+  lodash,
 }: {
   process: FsmProcess;
   direction?: "tb" | "bt" | "lr" | "rl";
+  lodash: unknown;
 }) {
   const charts = newProcessCharts({
     config: process.config,
@@ -65,7 +67,8 @@ export function renderStateCharts({
         process.dispatch(event);
       }
     },
-    direction,
+    direction: direction || "tb",
+    lodash,
   });
   const invalidation = getInvalidation(charts);
   addStateRenderer(
@@ -145,10 +148,11 @@ export type FsmStateChartsConfig = {
 export function newProcessCharts({
   config,
   direction = "lr",
-  onStateClick,
-  onTransitionClick,
+  // onStateClick,
+  // onTransitionClick,
   onEventClick,
   invalidation,
+  lodash
 }: {
   direction?: "tb" | "bt" | "lr" | "rl";
   config: FsmStateChartsConfig;
@@ -156,6 +160,7 @@ export function newProcessCharts({
   onTransitionClick?: (transitionId: string) => void;
   onEventClick?: (edge: { event: string }) => void;
   invalidation?: Promise<void>;
+  lodash : unknown;
 }): HTMLElement & { selectState: (stack: string[]) => () => void } {
   // ====================================================
   // Stage 1: create a static statechart index
