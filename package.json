@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@statewalker/fsm": "0.23.1",
-    "@statewalker/fsm-charts": "0.1.12",
+    "@statewalker/fsm-charts": "0.1.13",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
