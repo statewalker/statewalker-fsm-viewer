@@ -29,11 +29,12 @@
     }
   },
   "dependencies": {
-    "@statewalker/fsm": "0.23.1",
+    "@statewalker/fsm": "0.25.0",
     "@statewalker/fsm-charts": "0.1.13",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@observablehq/framework": "^1.13.2",
     "@statewalker/typescript-config": "*",
     "@types/jsdom": "^21.1.7",
     "@types/lodash-es": "^4.17.12",
@@ -56,6 +57,7 @@
   },
   "scripts": {
     "build": "rm -fr ./dist && yarn test && tsup",
+    "dev": "observable preview",
     "watch": "tsup --watch",
     "clean": "rm -rf dist",
     "lint": "eslint",

@@ -5,3 +5,4 @@ tmp*
 dist
 **/chart.svg
 index.html
+*/.observablehq
