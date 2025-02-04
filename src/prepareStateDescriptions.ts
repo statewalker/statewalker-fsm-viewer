@@ -9,7 +9,7 @@ export function prepareStateDescriptions({
   rootStateKey: string;
   // No title if undefined or empty string
   titleElementName?: string;
-}): (statesStack: string[]) => undefined | HTMLElement {
+}): (statesStack: string[]) => undefined | Node {
   const descriptions = getStatesDescriptions({
     element,
     rootStateKey,

@@ -21,6 +21,5 @@ export function _addStateRenderer(
   const cleanup = process.onStateCreate((state: FsmState) => {
     state.onEnter(callHandlerOnState);
   });
-  // invalidation?.then(cleanup);
   return cleanup;
 }

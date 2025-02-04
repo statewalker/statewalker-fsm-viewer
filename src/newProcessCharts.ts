@@ -30,7 +30,7 @@ export function newProcessCharts({
   config: FsmStateChartsConfig;
   onStateClick?: (statesStack: StateGraphNode[]) => void;
   onEventClick?: (edge: StateGraphEdge) => void;
-  renderer?: (statesStack: StateGraphNode[]) => undefined | HTMLElement;
+  renderer?: (statesStack: StateGraphNode[]) => undefined | Node;
   invalidation?: Promise<void>;
   lodash: unknown;
 }): HTMLElement & { selectState: (stack: string[]) => () => void } {

@@ -17,7 +17,7 @@ export function renderStateCharts({
   lodash: unknown;
   onStateClick?: (statesStack: StateGraphNode[]) => void;
   onEventClick?: (edge: StateGraphEdge) => void;
-  renderer?: (statesStack: StateGraphNode[]) => undefined | HTMLElement;
+  renderer?: (statesStack: StateGraphNode[]) => undefined | Node;
 }) {
   const charts = newProcessCharts({
     config: process.config,
