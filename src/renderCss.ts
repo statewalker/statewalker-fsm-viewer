@@ -1,4 +1,4 @@
-import { buildStatechartCss } from "./deps/@statewalker/fsm-charts.js";
+import { buildStatechartCss } from "@statewalker/fsm-charts";
 
 export function renderCss(rootSelector: string = ":root") {
   const css = buildStatechartCss({ prefix: rootSelector });

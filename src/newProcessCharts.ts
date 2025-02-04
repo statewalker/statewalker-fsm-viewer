@@ -6,7 +6,7 @@ import {
   StateChartIndex,
   type StateGraphNode,
   type StateGraphEdge,
-} from "./deps/@statewalker/fsm-charts.js";
+} from "@statewalker/fsm-charts";
 import { newId } from "./idGenerator.js";
 import { renderCss } from "./renderCss.js";
 

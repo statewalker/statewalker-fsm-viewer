@@ -1,15 +1,11 @@
-import {
-  prepareStateDescriptions,
-  renderStateDescription,
-  renderStateCharts,
-} from "../deps/@statewalker/fsm-viewer.js";
-import { type FsmProcessConfig, newProcess } from "../deps/@statewalker/fsm.js";
+import { prepareStateDescriptions, renderStateCharts } from "../index.js";
+import { type FsmProcessConfig, newProcess } from "@statewalker/fsm";
 
-export * from "../deps/@statewalker/fsm-viewer.js";
+export * from "@statewalker/fsm-viewer";
 
-export * from "../deps/@statewalker/fsm.js";
+export * from "@statewalker/fsm";
 
-import _ from "../deps/lodash.js";
+import _ from "lodash";
 
 export function renderProcess(
   processConfig: FsmProcessConfig,

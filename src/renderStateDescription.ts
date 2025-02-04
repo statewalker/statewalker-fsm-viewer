@@ -1,4 +1,4 @@
-import { FsmProcess } from "./deps/@statewalker/fsm.js";
+import type { FsmProcess } from "@statewalker/fsm";
 import { getInvalidation } from "./trackDomNode.js";
 import { _addStateRenderer } from "./_addStateRenderer.js";
 

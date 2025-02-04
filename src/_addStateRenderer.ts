@@ -1,4 +1,4 @@
-import { FsmProcess, FsmState } from "./deps/@statewalker/fsm.js";
+import type { FsmProcess, FsmState } from "@statewalker/fsm";
 
 export function _addStateRenderer(
   process: FsmProcess,
@@ -6,7 +6,6 @@ export function _addStateRenderer(
     stack: string[],
     event?: string,
   ) => void | (() => void) | Promise<void | (() => void)>,
-  invalidation?: Promise<unknown>,
 ) {
   async function callHandlerOnState(state?: FsmState) {
     if (!state) return;

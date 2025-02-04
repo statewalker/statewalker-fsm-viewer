@@ -1,12 +1,8 @@
-import { FsmProcess, FsmState } from "./deps/@statewalker/fsm.js";
-import { isStateTransitionEnabled } from "./deps/@statewalker/fsm.js";
+import type { FsmProcess } from "@statewalker/fsm";
+import type { StateGraphEdge, StateGraphNode } from "@statewalker/fsm-charts";
+import { isStateTransitionEnabled } from "@statewalker/fsm";
 import { newProcessCharts } from "./newProcessCharts.js";
-import { getInvalidation } from "./trackDomNode.js";
 import { _addStateRenderer } from "./_addStateRenderer.js";
-import type {
-  StateGraphEdge,
-  StateGraphNode,
-} from "./deps/@statewalker/fsm-charts.js";
 
 export function renderStateCharts({
   process,
@@ -39,13 +35,13 @@ export function renderStateCharts({
     direction: direction || "tb",
     lodash,
   });
-  const invalidation = getInvalidation(charts);
+  // const invalidation = getInvalidation(charts);
   _addStateRenderer(
     process,
     (stack) => {
       return charts.selectState(stack);
     },
-    invalidation,
+    // invalidation,
   );
   return charts;
 }
