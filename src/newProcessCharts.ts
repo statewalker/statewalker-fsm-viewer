@@ -111,7 +111,7 @@ export function newProcessCharts({
         }
       });
     }
-    api.focusStates(...idsStack);
+    // api.focusStates(...idsStack);
     return () => {
       api.deselectTransitions("active");
       api.deselectStates("active");
