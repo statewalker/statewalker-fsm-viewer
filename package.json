@@ -29,7 +29,7 @@
     }
   },
   "dependencies": {
-    "@statewalker/fsm": "^0.26.0",
+    "@statewalker/fsm": "^0.35.0",
     "@statewalker/fsm-charts": "^0.2.4"
   },
   "devDependencies": {
